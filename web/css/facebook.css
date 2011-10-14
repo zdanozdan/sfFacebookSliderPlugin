@@ -1,0 +1,17 @@
+#facebook_slider
+{
+    background: url("/sfFacebookSliderPlugin/images/facebook_slider.png") no-repeat scroll 0 0 transparent;
+ 
+    padding: 10px;
+    width: 235px;
+    height:402px;
+ 
+    position: fixed;
+    margin-top: -200px; /*połowa wysokości panelu w górę */
+    left: 0px;
+    top: 50%; 
+}
+.facebook_close
+{
+    background-position: 0px 0px -242px 0px;
+}

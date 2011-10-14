@@ -1,0 +1,13 @@
+# default values
+all:
+  facebook_slider:
+    app_id: "put app id here"
+    data_href: "put href data here"
+    class: fb-like-box 
+    style: background-color:white 
+    data_width: 190 
+    data_height: 380
+    data_show_faces: "true"
+    data_colorscheme: white
+    data_stream: "false"
+    data_header: "true"
