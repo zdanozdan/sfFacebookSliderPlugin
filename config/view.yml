@@ -1,0 +1,3 @@
+default:
+  stylesheets:    [/sfFacebookSliderPlugin/css/facebook.css ]
+  javascripts:    [/sfFacebookSliderPlugin/js/slider.js ]
