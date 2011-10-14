@@ -1,0 +1,71 @@
+The `sfFacebookSliderPlugin` is an interface to facebook facepile. It easily add 'facebook' slider component to the project
+
+
+Prerequisites
+-------------
+
+This plugin for symfony 1.3/1.4. Facebook.com requires app registration on it's site to get app id. 
+More info at [https://developers.facebook.com/apps]
+
+
+Installation
+------------
+
+1 - Install the plugin.
+
+The easiest way to install `sfFacebookSlider` is to use the symfony command line:
+
+    > php symfony plugin:install sfFacebookSlider
+
+However recommended method is to fork the latest package from my git hub [https://github.com/zdanozdan/sfFacebookSlider]
+
+2 - Register app on facebook.com and get key, and href forum parameters.
+
+3 - Configure app.yml
+
+  >  facebook_slider:
+  >    app_id:               my app id from facebook
+  >    data_href:            href to facebook app
+
+Those 2 are required to put in user app.yml config. Plugin however have more params to config in plugin/config directory and they can be user do further configure the plugin but they have default values
+
+      >  facebook_slider:
+        >   class: fb-like-box 
+        >   style: background-color:white 
+        >   data_width: 190 
+        >   data_height: 380
+        >   data_show_faces: "true"
+        >   data_colorscheme: white
+        >   data_stream: "false"
+        >   data_header: "true"
+
+4 - Clear the cache to enable the autoloading to find the new classes:
+
+    > php symfony cc
+
+5 - Use helper to display javascript
+
+In the template you can use sfFacebookSliderHelper do bind popup
+
+   >  <?php use_helper('FacebookSlider'); ?>
+   >  <?php echo add_facebook_slider_js($sf_user->getCulture()) ?>
+   >  <?php echo render_facebook_slider() ?>
+
+This should be added before </body> element so probably the best place would be layout.php (and every layout you want to display user voice feedback
+
+     > <body>
+     > HTML code here
+     > <p>this is apps/frontend/templates/layout.php</p>
+     >  <?php use_helper('FacebookSlider'); ?>
+     >  <?php echo add_facebook_slider_js($sf_user->getCulture()) ?>
+     >  <?php echo render_facebook_slider() ?>
+     > </body>
+
+Culture should be in form 'en_US'. If you have symfony culture in form 'en' you can baypass that using second param
+
+     >  <?php echo add_facebook_slider_js($sf_user->getCulture(),'US') ?>
+
+
+TODO
+----
+* add some testing
