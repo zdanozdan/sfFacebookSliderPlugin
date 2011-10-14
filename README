@@ -49,11 +49,16 @@ Those 2 are required to put in user app.yml config. Plugin however have more par
 
 5 - Use helper to display javascript
 
+Add js and css to view.yml
+
+   > stylesheets:    [/sfFacebookSliderPlugin/css/facebook.css ]
+   > javascripts:    [/sfFacebookSliderPlugin/js/slider.js ]
+
 In the template you can use sfFacebookSliderHelper do bind popup
 
-   >  <?php use_helper('FacebookSlider'); ?>
-   >  <?php echo add_facebook_slider_js($sf_user->getCulture()) ?>
-   >  <?php echo render_facebook_slider() ?>
+   >  php use_helper('FacebookSlider'); 
+   >  php echo add_facebook_slider_js($sf_user->getCulture()) 
+   >  php echo render_facebook_slider()
 
 This should be added before </body> element so probably the best place would be layout.php (and every layout you want to display user voice feedback
 
