@@ -17,6 +17,10 @@ The easiest way to install `sfFacebookSlider` is to use the symfony command line
 
     > php symfony plugin:install sfFacebookSlider
 
+Prefered method is to use github. Lastest commits are always there
+
+    > git clone https://github.com/zdanozdan/sfFacebookSliderPlugin
+
 However recommended method is to fork the latest package from my git hub [https://github.com/zdanozdan/sfFacebookSlider]
 
 2 - Register app on facebook.com and get key, and href forum parameters.
